@@ -1,0 +1,168 @@
+.login-container {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    transition: opacity 1000ms ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    animation-fill-mode: forwards;
+}
+
+.login-bg {
+    position: relative;
+    min-height: 100vh;
+    animation-fill-mode: forwards;
+}
+
+.login-bg img {
+    width: 85%;
+    max-width: 1000px;
+}
+
+.login-form-container {
+    position: absolute;
+    left: 0;
+    bottom: -400px;
+    width: 100%;
+    animation-fill-mode: forwards;
+}
+
+.login-leave {
+    bottom: calc(50% - 100px);
+    animation-name: login-leave;
+    -webkit-animation-name: login-leave; /* Safari 4.0 - 8.0 */
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.05, 1.1);
+    animation-delay: .5s;
+}
+
+/* login-leave animation code */
+@keyframes login-leave {
+    0% {bottom: calc(50% - 100px);}
+    25%  {bottom: calc(50% - 60px)}
+    100%   {bottom: -400px;}
+}
+
+.login-form {
+    padding: 25px;
+    background-image: linear-gradient(to bottom right, #ffffff, #EFEFEF);  
+    border-radius: 16px;
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.3);
+}
+
+.login-form > div {
+    background: no-repeat center;
+    background-size: cover; 
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 25px 0px;
+}
+
+.login-form form {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.login-form-grid > div {
+    padding: 10px 25px;
+    position: relative;
+}
+
+.login-form-icon {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20px;
+    left: 35px;
+}
+
+.login-show-password {
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    cursor: pointer;
+}
+
+.login-form input[type=text],
+.login-form input[type=password] {
+    display: block;
+    padding: 10px 5px;
+    padding-left: 35px;
+    border: 0px solid transparent;
+    border-radius: unset;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    outline-color: rgba(0, 0, 0, 0.3);
+    transition: all 400ms ease-in-out;
+}
+
+.login-form input[type=text]:focus,
+.login-form input[type=password]:focus {
+    outline-color: rgba(0, 0, 0, 0.5); 
+    border: unset;
+}
+
+.login-error .login-form input[type=text],
+.login-error .login-form input[type=password] {
+    background-color: rgba(255, 0, 0, 0.5);
+    outline-color: rgba(255, 0, 0, 0.5);
+}
+
+.login-success .login-form input[type=text],
+.login-success .login-form input[type=password] {
+    background-color: rgba(7, 177, 1, 0.5);
+    outline-color: rgba(7, 177, 1, 0.5);
+}
+
+.login-form input[type=text]::placeholder,
+.login-form input[type=password]::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+.login-form input[type=text]::-webkit-input-placeholder,
+.login-form input[type=password]::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+.login-form input[type=text]:-ms-input-placeholder,
+.login-form input[type=password]:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.login-form div.btn {
+    border: unset;
+    border-radius: unset;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    padding: 10px 5px;
+    cursor: pointer;
+    outline:none;
+    transition: all 400ms ease-in-out;
+}
+
+.login-form div.btn:hover {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.65);
+}
